@@ -1,9 +1,18 @@
 package org.lessons.java;
 
+import java.util.Scanner;
+
 public class FizzBuzz {
 	
 	public static void main(String[] args) {
-		for (int i = 1; i <= 100; i++) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digita un numero");
+		
+		int userChoise = sc.nextInt();
+		
+		for (int i = 1; i <= userChoise ; i++) {
 			
 			if (i % 3 == 0 && i % 5 == 0) {
 				System.out.println("FizzBuzz");
@@ -15,6 +24,8 @@ public class FizzBuzz {
 				System.out.println(i);
 			}
 		}
+		
+		sc.close();
 		
 	}
 
