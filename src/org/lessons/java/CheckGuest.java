@@ -12,15 +12,18 @@ public class CheckGuest {
 		String userName = sc.nextLine();
 		
 		
-		String message = null;
 		for (int i = 0; i < listGuest.length ; i++) {
-			if(userName == listGuest[i]) {
-				message = "Benvenuto alla festa";
+			
+			String guest = listGuest[i];
+			if(userName.equals(guest)) {
+				System.out.println("Benvenuto alla festa!");
+				return;
 			} else {
-				message = "Non sei invitato alla festa";
+				System.out.println("Non sei invitato alla festa");
+				return;
 			}
 		}
-		System.out.println(message);
+		
 		sc.close();
 	}
 
